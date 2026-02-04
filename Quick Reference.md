@@ -1,11 +1,11 @@
 # Verilog Expressions for Gates
 ## Basic Gates
 ### AND
-` x = a & b; `
+` x = a & b `
 ### NAND
-` x = ~(a & b); `
+` x = ~(a & b) `
 ### OR
-` x = a | b; `
+` x = a | b `
 ### NOR
 ` x = ~(a | b) `
 ### NOT
@@ -14,47 +14,47 @@
 ## Universal Gates
 ### NAND
 #### NOT
-` x = ~(a & a); `
+` x = ~(a & a) `
 #### AND
 ```verilog
- y = ~(a & b);
- x = ~(y & y);
+ y = ~(a & b)
+ x = ~(y & y)
 ```
 #### OR
 ```verilog
-y = ~(a & a);
-z = ~(b & b);
-x = ~(y & z);
+y = ~(a & a)
+z = ~(b & b)
+x = ~(y & z)
 ```
 #### NOR
 ```verilog
-y = ~(a & a);
-z = ~(b & b);
-w = ~(y & z);
-x = ~(w & w);
+y = ~(a & a)
+z = ~(b & b)
+w = ~(y & z)
+x = ~(w & w)
 ```
 
 ### NOR
 #### NOT
-` x = ~(a | a); `
+` x = ~(a | a) `
 #### OR
 ```verilog
- y = ~(a | b);
- x = ~(y | y);
+ y = ~(a | b)
+ x = ~(y | y)
 ```
 #### AND
 ```verilog
- y = ~(a | a);
- z = ~(b | b);
- x = ~(y | z);
+ y = ~(a | a)
+ z = ~(b | b)
+ x = ~(y | z)
 ```
 #### XOR
 ```verilog
 // XOR is A'B + AB'
-assign c = ~(a | a); // A'
-assign d = ~(b | b); // B'
-assign e = ~(b | c); // A'B
-assign f = ~(a | d); // AB'
-assign g = ~(e | f); // (A'B + AB')'
-assign x = ~(g | g); // NOT g
+ c = ~(a | a) // A'
+ d = ~(b | b) // B'
+ e = ~(b | c) // A'B
+ f = ~(a | d) // AB'
+ g = ~(e | f) // (A'B + AB')'
+ x = ~(g | g) // NOT g
 ```
