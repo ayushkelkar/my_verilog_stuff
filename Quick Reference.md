@@ -1,18 +1,18 @@
 # Verilog Expressions for Gates
 ## Basic Gates
-### AND
+### AND - 08
 ` x = a & b `
-### NAND
+### NAND - 00
 ` x = ~(a & b) `
-### OR
+### OR - 32
 ` x = a | b `
-### NOR
+### NOR - 02
 ` x = ~(a | b) `
-### NOT
+### NOT - 04
 ` x = ~a `
 
 ## Universal Gates
-### NAND
+### NAND - 00
 #### NOT
 ` x = ~(a & a) `
 #### AND
@@ -34,7 +34,7 @@ w = ~(y & z)
 x = ~(w & w)
 ```
 
-### NOR
+### NOR - 02
 #### NOT
 ` x = ~(a | a) `
 #### OR
